@@ -1,18 +1,14 @@
 import 'package:yemeksiparis/data/entity/yemekler.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:yemeksiparis/data/repo/yemeklerDao_repository.dart';
+class AnaSayfaCubit extends Cubit<List<Yemekler>> {
+    AnaSayfaCubit():super(<Yemekler>[]);
 
-class YemeklerCevap{
-  List<Yemekler> yemekler;
-  int success;
+    var krepo = YemeklerDaoRepository();
 
-  YemeklerCevap({required this.yemekler,required this.success});
+    Future<void> yemekleriListele() async{
+      var list = await krepo.yemekleriListele();
+      emit(list);
+    }
 
-
-  factory YemeklerCevap.fromJson(Map<String,dynamic> json){
-    var jsonArray = json["yemekler"] as List;
-    var success = json["success"] as int;
-
-    var yemekler = jsonArray.map((jsonArrayNesnesi) => Yemekler.fromJson(jsonArrayNesnesi)).toList();
-
-    return YemeklerCevap(yemekler: yemekler, success: success);
-  }
 }
