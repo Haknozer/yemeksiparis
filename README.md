@@ -1,16 +1,4 @@
-# yemeksiparis
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/Haknozer/yemeksiparis/assets/137529910/3dd30e1c-1943-4f22-9b9e-6742618bbe18)
+![image](https://github.com/Haknozer/yemeksiparis/assets/137529910/a8e761d8-84de-4d8a-a061-c582235adbed)
+![image](https://github.com/Haknozer/yemeksiparis/assets/137529910/c238a0a2-1756-4c12-9b6d-7f2fadb16d99)
+![image](https://github.com/Haknozer/yemeksiparis/assets/137529910/737ea9b4-da3d-4810-9f6c-206b7fe2c209)

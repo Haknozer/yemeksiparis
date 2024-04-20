@@ -16,3 +16,21 @@ class YemeklerCevap{
     return YemeklerCevap(yemekler: yemekler, success: success);
   }
 }
+
+
+class SepetYemeklerCevap{
+  List<SepetYemekler> yemekler;
+  int success;
+
+  SepetYemeklerCevap({required this.yemekler,required this.success});
+
+
+  factory SepetYemeklerCevap.fromJson(Map<String,dynamic> json){
+    var jsonArray = json["sepet_yemekler"] as List;
+    var success = json["success"] as int;
+
+    var yemekler = jsonArray.map((jsonArrayNesnesi) => SepetYemekler.fromJson(jsonArrayNesnesi)).toList();
+
+    return SepetYemeklerCevap(yemekler: yemekler, success: success);
+  }
+}

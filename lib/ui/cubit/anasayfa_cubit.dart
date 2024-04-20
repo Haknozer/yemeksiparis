@@ -11,4 +11,9 @@ class AnaSayfaCubit extends Cubit<List<Yemekler>> {
       emit(list);
     }
 
+    Future<void> sepeteEkle(String yemek_adi,String yemek_resim_adi,int yemek_fiyat,int yemek_siparis_adet) async {
+      krepo.sepeteEkle(yemek_adi, yemek_resim_adi, yemek_fiyat, yemek_siparis_adet);
+    }
+
+
 }
