@@ -51,8 +51,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
       child: FittedBox(
         child: FloatingActionButton(
           onPressed: () {
-            setState(() {
-            });
+            Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SepetSayfa(),));
           },
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(40)
@@ -95,6 +94,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
         setState(() {
           selected = value;
           Navigator.of(context).push(MaterialPageRoute(builder: (context) => pages[value],));
+          Navigator.popUntil(context, (route) => true);
         });
       },
     );
@@ -181,7 +181,9 @@ class _AnaSayfaState extends State<AnaSayfa> {
             ),
             const Spacer(),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                context.read<AnaSayfaCubit>().sepeteEkle(yemek.yemek_adi,yemek.yemek_resim, int.parse(yemek.yemek_fiyat), 1);
+              },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5)),
